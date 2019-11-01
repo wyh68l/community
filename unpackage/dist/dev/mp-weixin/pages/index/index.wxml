@@ -1,0 +1,1 @@
+<view class="content animated fadeInRight data-v-3d0cf7fb"><view class="item animated data-v-3d0cf7fb" hover-class="hoverItem rubberBand" hover-stay-time="{{800}}" data-event-opts="{{[['tap',[['animated',['$event']]]]]}}" bindtap="__e"></view></view>

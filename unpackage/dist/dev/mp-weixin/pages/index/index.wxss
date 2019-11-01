@@ -1,0 +1,10 @@
+.content .item.data-v-3d0cf7fb {
+  width: 200rpx;
+  height: 200rpx;
+  background-color: #000;
+  margin-top: 50rpx;
+}
+.content .hoverItem.data-v-3d0cf7fb {
+  background-color: red;
+}
+

@@ -1,0 +1,98 @@
+{
+	//所有页面的路径样式之类的，类似于路由
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "首页",
+				"navigationBarBackgroundColor":"#fff",
+				
+				//app-plus进行安卓移动端样式设置
+				"app-plus":{
+					//是否显示滚动条
+					"scrollIndicator":"none",
+					
+					//自定义导航栏
+					"titleNView":{
+						
+						//搜索框样式
+						"searchInput":{
+							"align":"center",
+							"backgroundColor":"#f7f7f7",
+							"borderRadius":"4px",
+							"placeholder":"有好康的哦~",
+							"placeholderColor":"#cccccc",
+							"disabled":false//是否可以点击
+						},
+						
+						//配置按钮
+						"buttons":[
+							
+						]
+					}
+					
+				}
+			}
+		}, {
+			"path": "pages/mine/mine",
+			"style": {
+				"navigationBarTitleText": "我的"
+			}
+		}, {
+			"path": "pages/paper/paper",
+			"style": {
+				"navigationBarTitleText": "小纸条"
+			}
+		}, {
+			"path": "pages/news/news",
+			"style": {
+				"navigationBarTitleText": "趣事"
+			}
+		}
+	    ,{
+            "path" : "common/topBar/topBar",
+            "style" : {}
+        }
+    ],
+	//顶部导航栏--全局样式（优先级最低）
+	"globalStyle": {
+		  // "navigationStyle":"custom",
+		"navigationBarTextStyle": "white",
+		"navigationBarTitleText": "首家澳门赌场上线了",
+		"navigationBarBackgroundColor": "#4CB8C4",
+		"backgroundColor": "#F8F8F8"
+	},
+	//底部导航栏样式
+	"tabBar":{
+		"color":"#ADADAD",
+		"selectedColor":"#4CB8C4",
+		"backgroundColor":"#fff",
+		"borderStyle":"black",
+		"list":[
+			{
+				"pagePath":"pages/index/index",
+				"text":"首页",
+				"iconPath":"static/icon/footer/index.png",
+				"selectedIconPath":"static/icon/footer/index2.png"
+			},
+			{
+				"pagePath":"pages/news/news",
+				"text":"趣事",
+				"selectedIconPath":"static/icon/footer/news2.png",
+				"iconPath":"static/icon/footer/news.png"
+			},
+			{
+				"pagePath":"pages/paper/paper",
+				"text":"小纸条",
+				"selectedIconPath":"static/icon/footer/paper2.png",
+				"iconPath":"static/icon/footer/paper.png"
+			},
+			{
+				"pagePath":"pages/mine/mine",
+				"text":"我的",
+				"selectedIconPath":"static/icon/footer/mine2.png",
+				"iconPath":"static/icon/footer/mine.png"
+			}
+		]
+	}
+}
