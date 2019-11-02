@@ -1,36 +1,45 @@
-<template>	
-	<view class="content animated fadeInRight">
-		<!-- hover-class点击后的样式，会变回来 -->
-		<!-- hover-stay-time 点击后样式的持续时间 -->
-		<!-- @tap和@click一样也是点击事件，不过在移动端推荐使用tap，肯呢个是因为快点吧 -->
-		<view hover-class="hoverItem rubberBand" class="item animated" :hover-stay-time="800" @tap="animated">
-			
+<template>
+	<view class="content">
+    <TabBar @tabIndex = 'getTabIndex'></TabBar>
+    <ContentSwiper  :tabIndex = 'tabIndex'></ContentSwiper>
 		</view>
 	</view>
 </template>
 
 <script>
-	// import topBar from '../../common/topBar/topBar.vue'
+	 import IndexList from '../../components/index/IndexList/IndexList.vue'
+   import TabBar from '../../components/tabBar/tabBar.vue'
+   import ContentSwiper from '../../components/ContentSwiper/ContentSwiper.vue'
+
 	export default {
 		data() {
 			return {
 				title: 'Hello',
-				animate:false
-			}
+				animate:false,
+        tabIndex:0
+       }
 		},
 		onLoad() {
 
 		},
+    /* onNavigationBarSearchInputClicked监听原生的搜索框点击事件*/
+    onNavigationBarSearchInputClicked() {
+      uni.navigateTo({
+        url:'../../components/seach/seach'
+      })
+    },
 		created() {
 
 		},
 		methods: {
-			animated(e) {
-				console.log('sasas');
-			}
+      getTabIndex(res){
+        this.tabIndex = res;
+      }
 		},
 		components:{
-			// topBar
+			 IndexList,
+       TabBar,
+       ContentSwiper
 		}
 	}
 </script>
@@ -43,7 +52,7 @@
 		background-color: #000;
 		margin-top: 50upx;
 	}
-	
+
 	.hoverItem{
 		background-color: red;
 	}

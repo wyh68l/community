@@ -1,4 +1,7 @@
-# mall
+# community
+# 这是一个全新的基于uniapp框架的社区项目
+# 相信我，他将变得非常完整
+# 敬请期待。。。
 
 ## Project setup
 ```
