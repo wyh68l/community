@@ -80,6 +80,7 @@
 
           //自定义导航栏
           "titleNView": {
+            "autoBackButton": false,
 
             //搜索框样式
             "searchInput": {
@@ -89,60 +90,68 @@
               "placeholder": "你想康的都有噢~",
               "placeholderColor": "#cccccc",
               "disabled": false //是否可以编写
+
             },
 
             //配置按钮
-            "buttons": [
-              { //右边
-                "color": "#fff",
-                "colorPressed": "#BBBBBB", //按下按钮的颜色
-                "float": "right",
-                "fontSize": "19px",
-                "text": "搜索"
-              }
-            ]
+            "buttons": [{ //右边
+              "color": "#fff",
+              "colorPressed": "#BBBBBB", //按下按钮的颜色
+              "float": "right",
+              "fontSize": "16px",
+              "text": "返回"
+            }]
           }
 
         }
 
       }
     }
-  ],
+      ,{
+            "path" : "pages/index/release",
+            "style" : {
+              "app-plus":{
+                //自定义标题栏，禁止显示原生标题栏
+                "titleNView":false
+              }
+            }
+        }
+    ],
   //顶部导航栏--全局样式（优先级最低）
   "globalStyle": {
     // "navigationStyle":"custom",
     "navigationBarTextStyle": "white",
-    "navigationBarTitleText": "首家澳门赌场上线了",
+    "navigationBarTitleText": "激情|诱惑|首家澳门赌场上线了",
     "navigationBarBackgroundColor": "#fff"
   },
   //底部导航栏样式
   "tabBar": {
     "color": "#fff",
-    "selectedColor": "#fff",
+    "selectedColor": "#333333",
     "backgroundColor": "#fff",
     "borderStyle": "black",
     "list": [{
         "pagePath": "pages/index/index",
         "text": "首页",
         "iconPath": "static/icon/footer/index3.png",
-        "selectedIconPath": "static/icon/footer/index2.png"
+        "selectedIconPath": "static/icon/footer/index.png"
       },
       {
         "pagePath": "pages/news/news",
         "text": "趣事",
-        "selectedIconPath": "static/icon/footer/news2.png",
+        "selectedIconPath": "static/icon/footer/news.png",
         "iconPath": "static/icon/footer/news3.png"
       },
       {
         "pagePath": "pages/paper/paper",
         "text": "小纸条",
-        "selectedIconPath": "static/icon/footer/paper2.png",
+        "selectedIconPath": "static/icon/footer/paper.png",
         "iconPath": "static/icon/footer/paper3.png"
       },
       {
         "pagePath": "pages/mine/mine",
         "text": "我的",
-        "selectedIconPath": "static/icon/footer/mine2.png",
+        "selectedIconPath": "static/icon/footer/mine.png",
         "iconPath": "static/icon/footer/mine3.png"
       }
     ]
