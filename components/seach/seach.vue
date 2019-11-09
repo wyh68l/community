@@ -8,7 +8,7 @@
   export default {
     data() {
       return {
-
+       
       }
     },
     //监听原生导航栏点击事件
